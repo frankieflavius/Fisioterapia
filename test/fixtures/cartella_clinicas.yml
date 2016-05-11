@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  generalità: MyText
+  anamnesi: MyText
+  obiettivo: MyText
+  diagnosi: MyText
+  terapia: MyText
+  esiti: MyText
+
+two:
+  generalità: MyText
+  anamnesi: MyText
+  obiettivo: MyText
+  diagnosi: MyText
+  terapia: MyText
+  esiti: MyText

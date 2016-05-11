@@ -1,0 +1,41 @@
+<%= form_for(@cartella_clinica) do |f| %>
+  <% if @cartella_clinica.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cartella_clinica.errors.count, "error") %> prohibited this cartella_clinica from being saved:</h2>
+
+      <ul>
+      <% @cartella_clinica.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :generalità %><br>
+    <%= f.text_area :generalità %>
+  </div>
+  <div class="field">
+    <%= f.label :anamnesi %><br>
+    <%= f.text_area :anamnesi %>
+  </div>
+  <div class="field">
+    <%= f.label :obiettivo %><br>
+    <%= f.text_area :obiettivo %>
+  </div>
+  <div class="field">
+    <%= f.label :diagnosi %><br>
+    <%= f.text_area :diagnosi %>
+  </div>
+  <div class="field">
+    <%= f.label :terapia %><br>
+    <%= f.text_area :terapia %>
+  </div>
+  <div class="field">
+    <%= f.label :esiti %><br>
+    <%= f.text_area :esiti %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

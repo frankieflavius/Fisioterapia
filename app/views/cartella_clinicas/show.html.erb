@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Generalità:</strong>
+  <%= @cartella_clinica.generalità %>
+</p>
+
+<p>
+  <strong>Anamnesi:</strong>
+  <%= @cartella_clinica.anamnesi %>
+</p>
+
+<p>
+  <strong>Obiettivo:</strong>
+  <%= @cartella_clinica.obiettivo %>
+</p>
+
+<p>
+  <strong>Diagnosi:</strong>
+  <%= @cartella_clinica.diagnosi %>
+</p>
+
+<p>
+  <strong>Terapia:</strong>
+  <%= @cartella_clinica.terapia %>
+</p>
+
+<p>
+  <strong>Esiti:</strong>
+  <%= @cartella_clinica.esiti %>
+</p>
+
+<%= link_to 'Modifica', edit_cartella_clinica_path(@cartella_clinica) %> |
+<%= link_to 'Indietro', cartella_clinicas_path %>

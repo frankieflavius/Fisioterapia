@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Lista Cartelle Cliniche</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Generalità</th>
+      <th>Anamnesi</th>
+      <th>Obiettivo</th>
+      <th>Diagnosi</th>
+      <th>Terapia</th>
+      <th>Esiti</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cartella_clinicas.each do |cartella_clinica| %>
+      <tr>
+        <td><%= cartella_clinica.generalità %></td>
+        <td><%= cartella_clinica.anamnesi %></td>
+        <td><%= cartella_clinica.obiettivo %></td>
+        <td><%= cartella_clinica.diagnosi %></td>
+        <td><%= cartella_clinica.terapia %></td>
+        <td><%= cartella_clinica.esiti %></td>
+        <td><%= link_to 'Mostra', cartella_clinica %></td>
+        <td><%= link_to 'Modifica', edit_cartella_clinica_path(cartella_clinica) %></td>
+        <td><%= link_to 'Elimina', cartella_clinica, method: :delete, data: { confirm: 'Sei sicuro?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nuova Cartella clinica', new_cartella_clinica_path %>
