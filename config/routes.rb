@@ -1,10 +1,5 @@
 Rails.application.routes.draw do
-  get 'static_pages/home'
-
-  get 'static_pages/help'
-
-  root :to => redirect('/pazientes')
-  
+  root 'static_pages#home'
   resources :pazientes do
 	resources :cartella_clinicas
   end
